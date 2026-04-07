@@ -2785,9 +2785,9 @@ property-expr@^2.0.5:
   integrity sha512-SVtmxhRE/CGkn3eZY1T6pC8Nln6Fr/lu1mKSgRud0eC73whjGfoAogbn78LkD8aFL0zz3bAFerKSnOl7NlErBA==
 
 protobufjs-cli@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/protobufjs-cli/-/protobufjs-cli-2.0.0.tgz#695f6db14cc0d857f4453364875c0d62fabe5ac7"
-  integrity sha512-/QGByFXSLY9Was5Oq8yKn5lu1pMywGMHgE0fDR9b4nZFTvaWJonHiJxT3HHu2ZuOQAxd7ufYyQtW8Q1ZgW+gPg==
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/protobufjs-cli/-/protobufjs-cli-2.0.1.tgz#b832a67fa4b6bd74657a15f1711307a4bc33eacb"
+  integrity sha512-wtlV7LjE8GHi+cF3c4DWCfxPZCXbNNqRCZxypfIBQWgQSqvZqrrFtnQTHB9IgsbXMqQ6eVJWJeKCSTMzAchjXw==
   dependencies:
     chalk "^4.0.0"
     escodegen "^1.13.0"
@@ -2801,9 +2801,9 @@ protobufjs-cli@^2.0.0:
     uglify-js "^3.7.7"
 
 protobufjs@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-8.0.0.tgz#d884102c1fe8d0b1e2493789ad37bc7ea47c0893"
-  integrity sha512-jx6+sE9h/UryaCZhsJWbJtTEy47yXoGNYI4z8ZaRncM0zBKeRqjO2JEcOUYwrYGb1WLhXM1FfMzW3annvFv0rw==
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-8.0.1.tgz#c1781abf9a73812cbd483b32138ac59948223806"
+  integrity sha512-NWWCCscLjs+cOKF/s/XVNFRW7Yih0fdH+9brffR5NZCy8k42yRdl5KlWKMVXuI1vfCoy4o1z80XR/W/QUb3V3w==
   dependencies:
     "@protobufjs/aspromise" "^1.1.2"
     "@protobufjs/base64" "^1.1.2"
@@ -3054,10 +3054,10 @@ type-fest@^2.19.0:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.19.0.tgz#88068015bb33036a598b952e55e9311a60fd3a9b"
   integrity sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==
 
-typescript@^5.9.3:
-  version "5.9.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.9.3.tgz#5b4f59e15310ab17a216f5d6cf53ee476ede670f"
-  integrity sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==
+typescript@^6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-6.0.2.tgz#0b1bfb15f68c64b97032f3d78abbf98bdbba501f"
+  integrity sha512-bGdAIrZ0wiGDo5l8c++HWtbaNCWTS4UTv7RaTH/ThVIgjkveJt83m74bBHMJkuCbslY8ixgLBVZJIOiQlQTjfQ==
 
 uc.micro@^2.0.0, uc.micro@^2.1.0:
   version "2.1.0"
