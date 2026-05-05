@@ -78,6 +78,6 @@
     "babel-jest": "^30.3.0",
     "cpy-cli": "^7.0.0",
     "protobufjs-cli": "^2.0.0",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.3"
   }
 }
