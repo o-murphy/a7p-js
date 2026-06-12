@@ -7,28 +7,12 @@
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     },
-    "./errors": {
-      "import": "./dist/errors.js",
-      "types": "./dist/errors.d.ts"
-    },
-    "./validate": {
-      "import": "./dist/validate.js",
-      "types": "./dist/validate.d.ts"
-    },
-    "./types": {
-      "import": "./dist/types.js",
-      "types": "./dist/types.d.ts"
-    },
-    "./profedit": {
-      "import": "./dist/profedit.js",
-      "types": "./dist/profedit.d.ts"
-    },
-    "./dist": {
-      "import": "./dist/*.js",
-      "types": "./dist/*.d.ts"
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js"
     }
   },
   "scripts": {
@@ -63,21 +47,21 @@
   "dependencies": {
     "base64-js": "^1.5.1",
     "crypto-js": "^4.2.0",
-    "protobufjs": "^8.0.3",
+    "protobufjs": "^8.6.3",
     "yup": "^1.7.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.29.0",
-    "@babel/preset-env": "^7.29.5",
-    "@babel/preset-typescript": "^7.28.5",
-    "@jest/globals": "^30.3.0",
-    "@types/base64-js": "^1.5.0",
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "@babel/preset-typescript": "^7.29.7",
+    "@jest/globals": "^30.4.1",
+    "@types/base64-js": "^1.5.1",
     "@types/crypto-js": "^4.2.2",
     "@types/jest": "^30.0.0",
     "@types/yup": "^0.32.0",
-    "babel-jest": "^30.3.0",
+    "babel-jest": "^30.4.1",
     "cpy-cli": "^7.0.0",
-    "protobufjs-cli": "^2.0.3",
+    "protobufjs-cli": "^2.5.4",
     "typescript": "^6.0.3"
   }
 }
