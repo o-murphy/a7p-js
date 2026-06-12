@@ -1,6 +1,6 @@
 {
   "name": "a7p-js",
-  "version": "2.0.0",
+  "version": "1.1.0",
   "description": "Wrapper for .a7p files",
   "type": "module",
   "main": "dist/index.js",
@@ -26,6 +26,7 @@
     "dist/**/*.js",
     "dist/**/*.d.ts",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "repository": {

@@ -38,11 +38,23 @@ jobs:
             echo "tag=latest" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Extract changelog section
+        id: changelog
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          NOTES=$(awk "/^## \[$VERSION\]/{flag=1; next} /^## \[/{flag=0} flag" CHANGELOG.md | sed '/^[[:space:]]*$/d')
+          if [ -z "$NOTES" ]; then
+            NOTES=$(awk "/^## \[Unreleased\]/{flag=1; next} /^## \[/{flag=0} flag" CHANGELOG.md | sed '/^[[:space:]]*$/d')
+          fi
+          echo "notes<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$NOTES" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           prerelease: ${{ steps.meta.outputs.prerelease == 'true' }}
-          generate_release_notes: true
+          body: ${{ steps.changelog.outputs.notes }}
 
       - name: Publish to npm (with provenance)
         run: npm publish --provenance --tag ${{ steps.meta.outputs.tag }}
