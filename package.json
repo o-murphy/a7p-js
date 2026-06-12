@@ -1,6 +1,6 @@
 {
   "name": "a7p-js",
-  "version": "1.0.10",
+  "version": "2.0.0",
   "description": "Wrapper for .a7p files",
   "type": "module",
   "main": "dist/index.js",
@@ -16,10 +16,9 @@
     }
   },
   "scripts": {
-    "build:proto": "npx pbjs -t static-module -w es6 -o src/profedit.js src/proto/profedit.proto && npx pbts -o src/profedit.d.ts src/profedit.js && node scripts/fix-imports.mjs",
+    "build:proto": "protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=src --ts_proto_opt=esModuleInterop=true -I=src/proto src/proto/profedit.proto",
     "build:ts": "tsc",
-    "build:copy": "npx cpy 'src/profedit.*' 'dist/'",
-    "build": "yarn build:ts && yarn build:copy"
+    "build": "yarn build:ts"
   },
   "author": "o-murphy",
   "license": "ISC",
@@ -45,9 +44,9 @@
   },
   "homepage": "https://github.com/o-murphy/a7p-js#readme",
   "dependencies": {
+    "@bufbuild/protobuf": "^2.12.0",
     "base64-js": "^1.5.1",
     "crypto-js": "^4.2.0",
-    "protobufjs": "^8.6.3",
     "yup": "^1.7.1"
   },
   "devDependencies": {
@@ -55,13 +54,12 @@
     "@babel/preset-env": "^7.29.7",
     "@babel/preset-typescript": "^7.29.7",
     "@jest/globals": "^30.4.1",
-    "@types/base64-js": "^1.5.1",
+    "@types/base64-js": "^1.5.0",
     "@types/crypto-js": "^4.2.2",
     "@types/jest": "^30.0.0",
     "@types/yup": "^0.32.0",
     "babel-jest": "^30.4.1",
-    "cpy-cli": "^7.0.0",
-    "protobufjs-cli": "^2.5.4",
+    "ts-proto": "^2.11.8",
     "typescript": "^6.0.3"
   }
 }
